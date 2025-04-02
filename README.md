@@ -17,8 +17,8 @@ Clone the repository:
 
 bash
 Copy
-git clone https://github.com/helly373/101414910-lab-test2-comp3133.git
-cd 101414910-lab-test2-comp3133
+git clone https://github.com/piyyush754/101410303-lab-test2-comp3133
+cd 101410303-lab-test2-comp3133
 Install dependencies:
 
 bash
@@ -48,11 +48,10 @@ API: SpaceX REST API
 📁 Project Structure
 Copy
 src/
-├─ app/          # Main components and logic
-├─ assets/       # Images, fonts, or static files
-├─ styles/       # Global CSS styles (optional)
+├─ app/ # Main components and logic
+├─ assets/ # Images, fonts, or static files
+├─ styles/ # Global CSS styles (optional)
 🙌 Acknowledgments
 Data provided by SpaceX API.
 
 Built for COMP 3133 Lab Test 2.
-
