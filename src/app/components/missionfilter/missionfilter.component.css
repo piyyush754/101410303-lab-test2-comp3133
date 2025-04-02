@@ -1,0 +1,115 @@
+.filter-container {
+  /* Make it a flex container that stretches vertically to match the tallest child */
+  display: flex;
+  align-items: stretch; /* ensures both left and right columns are equal height */
+  justify-content: space-between; /* filters on the left, buttons on the right */
+
+  background: linear-gradient(135deg, #565761, #767886, #8c8d9b);
+  padding: 30px;
+  margin: 24px auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+  transition: all 0.3s ease;
+  color: #ffffff;
+}
+
+.filter-group {
+  /* Stack the filters vertically */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* space between each filter */
+  margin: 0;
+}
+
+.button-group {
+  /* Stack the buttons vertically and center them in the available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  gap: 20px; /* space between Apply/Reset buttons */
+  margin-left: 20px; /* optional spacing from the filter group */
+}
+
+/* Keep your existing styles for mat-form-field, button hover, etc. */
+mat-form-field {
+  min-width: 220px;
+  transition: all 0.2s ease;
+}
+
+mat-form-field:focus-within {
+  transform: scale(1.02);
+}
+
+/* Sample focus/outline color rules; keep or adjust as needed */
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: rgba(255, 255, 255, 0.2);
+}
+::ng-deep .mat-form-field-appearance-outline:hover .mat-form-field-outline {
+  color: rgba(255, 255, 255, 0.3);
+}
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline {
+  color: #7c82ff;
+}
+::ng-deep .mat-form-field-label {
+  color: #bbbbbb;
+}
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-label {
+  color: #7c82ff;
+}
+::ng-deep .mat-select-arrow {
+  color: #bbbbbb;
+}
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-select-arrow {
+  color: #7c82ff;
+}
+::ng-deep .mat-select-panel {
+  background-color: #1a1a2e !important;
+  color: white !important;
+  border-radius: 8px !important;
+}
+
+/* Button styling (keep your original design) */
+button {
+  min-width: 140px;
+  font-weight: 500;
+  border-radius: 28px;
+  padding: 8px 24px;
+  transition: all 0.3s ease;
+}
+
+button:first-child {
+  background-color: #000000;
+  color: white;
+  border: none;
+}
+
+button:last-child {
+  background-color: transparent;
+  border: 2px solid #0c0d1a;
+  color: #030308;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(124, 130, 255, 0.3);
+}
+
+/* Responsive adjustments (optional) */
+@media (max-width: 768px) {
+  /* Stack everything in one column on mobile */
+  .filter-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .button-group {
+    margin-left: 0;
+    width: 100%;
+    align-items: center;
+  }
+  
+  button {
+    width: 80%;
+  }
+}
